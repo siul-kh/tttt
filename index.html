@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>우리 결혼합니다 | 김기환 & 이지선</title>
+  <meta name="description" content="모바일 청첩장 · 오시는 길 · 방명록 · 사진첩" />
+  <style>
+    :root{
+      --bg:#fffaf7;
+      --ink:#2a2a2a;
+      --muted:#8a8a8a;
+      --accent:#f0d9cf;
+      --card:#ffffff;
+      --radius:16px;
+      --maxw:680px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;scroll-behavior:smooth}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",system-ui,Segoe UI,Roboto,Pretendard,sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    /* Top bar */
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(120%) blur(6px);
+      background:rgba(255,250,247,0.8);
+      border-bottom:1px solid #eee;
+    }
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 16px}
+    .brand{font-weight:700}
+    .tabs{display:flex;gap:12px}
+    .tab{padding:8px 12px;border-radius:999px;border:1px solid #eee;background:#fff}
+    .tab:hover{background:#f8f8f8}
+    /* Hero */
+    .hero{padding:24px 20px 8px}
+    .card{
+      background:var(--card);
+      border:1px solid #eee;border-radius:var(--radius);
+      box-shadow:0 6px 30px rgba(0,0,0,.06);
+      overflow:hidden;
+    }
+    .cover{aspect-ratio:16/10;object-fit:cover}
+    .section{padding:20px}
+    h1{font-size:28px;margin:8px 0 4px}
+    .subtitle{color:var(--muted);margin:0 0 12px}
+    .meta{display:grid;grid-template-columns:1fr;gap:6px;font-weight:600}
+    .pill{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:8px 12px;border-radius:12px;background:#faf3ef;border:1px solid #f0e4de;
+      font-size:14px
+    }
+    .note{color:#666;margin-top:12px}
+    /* Sections */
+    .sec-title{font-size:20px;margin:0 0 10px}
+    .placeholder{
+      background:#f3f3f3;border:1px dashed #d9d9d9;border-radius:12px;
+      color:#777;text-align:center;padding:18px
+    }
+    /* Map block */
+    .map-frame{width:100%;height:260px;border:0;border-radius:12px;background:#eaeaea}
+    /* Guestbook */
+    .guest-actions{display:grid;gap:10px;margin-top:10px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:12px 14px;border-radius:12px;border:1px solid #e9e3df;background:#fff;cursor:pointer
+    }
+    .btn.primary{background:#111;color:#fff;border-color:#111}
+    /* Album grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .thumb{aspect-ratio:1/1;border-radius:10px;overflow:hidden;background:#eee}
+    .thumb img{width:100%;height:100%;object-fit:cover}
+    /* Footer */
+    footer{color:#999;text-align:center;padding:30px 0}
+    /* Responsive tweaks */
+    @media (min-width:560px){
+      .meta{grid-template-columns:repeat(3,1fr)}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner wrap">
+      <div class="brand">K & J Wedding</div>
+      <div class="tabs">
+        <a class="tab" href="#map">오시는길</a>
+        <a class="tab" href="#guestbook">방명록</a>
+        <a class="tab" href="#album">앨범</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card">
+        <img class="cover" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1400&auto=format&fit=crop" alt="Wedding cover">
+        <div class="section">
+          <h1>김기환 & 이지선</h1>
+          <p class="subtitle">따뜻한 마음으로 함께 걷는 길에 초대합니다</p>
+          <div class="meta">
+            <div class="pill">2025년 11월 22일 (토) 오후 1시</div>
+            <div class="pill">라온컨벤션 2층 아트홀</div>
+            <div class="pill">서울 성동구 아름다운길 100</div>
+          </div>
+          <p class="note">아래에서 오시는 길, 방명록, 사진첩을 확인하실 수 있어요.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section id="map" class="hero">
+      <div class="card">
+        <div class="section">
+          <h2 class="sec-title">📍 오시는 길</h2>
+          <div class="placeholder" style="margin-bottom:10px">
+            여기에 지도를 삽입하세요 (카카오/네이버 지도 iframe)<br>
+            *개발 메모: 브라우저에서 보일 수 있도록 임시 이미지 지도를 넣어둡니다.
+          </div>
+          <img class="map-frame" src="https://tile.openstreetmap.org/10/876/398.png" alt="Map preview (placeholder)">
+          <div style="margin-top:12px;color:#666;font-size:14px">* 지도는 임시 이미지입니다. 실제 배포 시 iframe으로 교체하세요.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUESTBOOK -->
+    <section id="guestbook" class="hero">
+      <div class="card">
+        <div class="section">
+          <h2 class="sec-title">📖 방명록</h2>
+          <p style="margin:0 0 8px;color:#666">축하 메시지를 남겨주세요!</p>
+          <div class="guest-actions">
+            <a class="btn primary" href="#" onclick="alert('여기에 구글폼 링크를 연결하세요!');return false;">메시지 남기기</a>
+            <a class="btn" href="#" onclick="alert('여기에 방명록 보기 링크를 연결하세요!');return false;">방명록 보기</a>
+          </div>
+          <div class="placeholder" style="margin-top:12px">
+            임시 설명: 방명록은 Google Forms / Tally / Typeform을 연결하면 됩니다.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALBUM -->
+    <section id="album" class="hero">
+      <div class="card">
+        <div class="section">
+          <h2 class="sec-title">📷 사진첩</h2>
+          <p style="margin:0 0 12px;color:#666">본식/스냅 사진을 여기에 앨범으로 모아두세요.</p>
+          <div class="grid">
+            <div class="thumb"><img src="https://picsum.photos/seed/w1/600/600" alt=""></div>
+            <div class="thumb"><img src="https://picsum.photos/seed/w2/600/600" alt=""></div>
+            <div class="thumb"><img src="https://picsum.photos/seed/w3/600/600" alt=""></div>
+            <div class="thumb"><img src="https://picsum.photos/seed/w4/600/600" alt=""></div>
+            <div class="thumb"><img src="https://picsum.photos/seed/w5/600/600" alt=""></div>
+            <div class="thumb"><img src="https://picsum.photos/seed/w6/600/600" alt=""></div>
+          </div>
+          <div class="placeholder" style="margin-top:12px">
+            개발 메모: 썸네일을 클릭하면 원본 사진(구글 포토/드라이브/클라우드)을 새 탭으로 열도록 연결하세요.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 김기환 & 이지선
+  </footer>
+</body>
+</html>
